@@ -1,0 +1,100 @@
+
+
+/** BEGIN: Non Openmrs CSS **/
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+	font-family: "Roboto";
+}
+:root {
+	--omrs-color-ink-lowest-contrast: rgba(47, 60, 85, 0.18);
+	--omrs-color-ink-low-contrast: rgba(60, 60, 67, 0.3);
+	--omrs-color-ink-medium-contrast: rgba(19, 19, 21, 0.6);
+	--omrs-color-interaction: #1e4bd1;
+	--omrs-color-interaction-minus-two: rgba(73, 133, 224, 0.12);
+	--omrs-color-danger: #b50706;
+	--omrs-color-bg-low-contrast: #eff1f2;
+	--omrs-color-ink-high-contrast: #121212;
+	--omrs-color-bg-high-contrast: #ffffff;
+}
+
+.my-select {
+  margin-top: 10px;
+  width: 273.25px;
+  border: none;
+  border-bottom: 0.14rem solid var(--omrs-color-danger);
+  box-shadow: 0 8px 2px -2px rgb(255, 226, 226);
+  height: 41px;
+  font-size: 1rem;
+}
+
+
+/* Input*/
+.omrs-input-underlined > input,
+.omrs-input-filled > input {
+	border: none;
+  margin-top: 4px;
+	border-bottom: 0.14rem solid var(--omrs-color-ink-medium-contrast);
+  box-shadow: 0 8px 2px -2px rgb(255, 226, 226);
+	font-size: 1rem;
+	padding-top: 0.825rem;
+	padding-bottom: 0.5rem;
+  width: 140%;
+  padding-left: 0.825rem;
+}
+@media only screen and (max-width: 600px) {
+  .omrs-input-underlined > input,
+  .omrs-input-filled > input {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 992px) {
+	.omrs-input-underlined > input,
+	.omrs-input-filled > input {
+	  width: 100%;
+	}
+  }
+@media only screen and (max-width: 939px) {
+	.my-select {
+		width: 198px !important;
+	}
+}
+.omrs-input-underlined > input:focus,
+.omrs-input-filled > input:focus {
+	outline: none;
+}
+
+.omrs-input-underlined > .omrs-input-label,
+.omrs-input-filled > .omrs-input-label {
+	position: absolute;
+	top: 5px;
+	left: 64px;
+	color: var(--omrs-color-ink-medium-contrast);
+	transition: top .2s;
+}
+.omrs-input-underlined > input:hover,
+.omrs-input-filled > input:hover {
+	background: var(--omrs-color-interaction-minus-two);
+	border-color: var(--omrs-color-ink-high-contrast);
+}
+
+/** DANGER **/
+
+.omrs-input-underlined.omrs-input-danger > .omrs-input-label, .omrs-input-underlined.omrs-input-danger > .omrs-input-helper,
+.omrs-input-filled.omrs-input-danger > .omrs-input-label, .omrs-input-filled.omrs-input-danger > .omrs-input-helper{
+	color: var(--omrs-color-danger);
+}
+
+.omrs-input-danger > svg {
+	fill: var(--omrs-color-danger);
+}
+
+.omrs-input-danger > input {
+	border-color: var(--omrs-color-danger);
+}
+
+.omrs-input-underlined > input {
+	background: var(--omrs-color-bg-high-contrast);
+}
+.omrs-input-filled > input {
+	background: var(--omrs-color-bg-low-contrast);
+}

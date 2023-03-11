@@ -1,0 +1,171 @@
+
+.car-item {
+    position: relative;
+    margin: 20px;
+    width: auto;
+    height: 400px;
+    transform-style: preserve-3d;
+    cursor: default;
+    align-items: center;
+    transition: all 0.5s ease-in-out;    
+    transition-delay: 100ms;
+}
+.car-item::before {
+    content: '';
+    position: absolute;
+    width: 49.5px;
+    height: 400px;
+    background-color: #ff6e72;
+    transform: rotateY(90deg);
+    transform-origin: 0 100%;
+}
+.car-item:hover {
+    .car-item & {
+        transform: rotateY(180deg);
+    }
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.car-front, .car-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+}
+.car-front {
+    background-color: #a73748ee;
+    flex-direction: column;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.car-back {
+    background: linear-gradient(150deg, rgba(255, 101, 104, 0.562) 0%, rgba(255, 163, 172, 0.904) 100%);
+    transform: translateZ(-49.5px) rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.truck_icon_item {
+    height: 80px;
+    width: 80px !important;
+}
+.truck_icon_item_kg {
+    height: 30px;
+    width: 30px;
+    margin-right:5px;
+}
+.parameters-car-front {
+    color:white;
+}
+.car-front>div {
+    display:flex;
+}
+
+.car-img-main {
+    height:40%;
+    max-width:50%;
+}
+.car-parameters {
+    height: 60%;
+    width: 100%;
+    padding: 10px;
+    display:flex;
+    padding: 20px;
+    flex-direction:column;
+}
+.details-car-button {
+    align-self: center;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    width: 200px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 20px;
+    bottom: 30px;
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: black;
+    background: whitesmoke;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+    transition: .3s;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.details-car-button:hover{
+    letter-spacing:4px;
+}
+.details-car-button:before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 70%;
+    left: 0px;
+    top: 6px;
+    background: linear-gradient(to right, transparent 50%, red 50% 100%);
+    animation: animate 5s linear infinite;
+    border-radius: 30px;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.details-car-button h5 {
+    position: relative;
+    z-index: 10;
+    font-size:9pt;
+    color:black;
+    margin-top:7px;
+}
+.details-car-button:after {
+    content: '';
+    position: absolute;
+    background: white;
+    inset: 4px;
+    border-radius:16px;
+}
+
+.hr-styled {
+    width: 100%;
+    margin: 20px 0;
+    padding: 0;
+    height: 1.5px;
+    border: none;
+    background: linear-gradient(to right, transparent 50%, #fff 50%), linear-gradient(to right, darkred, darkblue);
+    background-size: 16px 1px, 100% 1px;
+}
+.parameters-car {
+    border-radius: 10px;
+    display: none;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid gray;
+    font-family: 'Ubuntu', sans-serif;
+    background: rgba(219, 179, 223, 0.089);
+}
+.parameters-car:after {
+    position:relative;
+    width:0;
+    height: 0;
+    left: 38px;
+    top: 100px;
+    border: 15px solid;
+    border-color: #fff transparent transparent #fff;
+}

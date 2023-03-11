@@ -1,0 +1,60 @@
+#checkout {
+    font-size: 12pt;
+    width: 270px;
+    margin:15px;
+}
+@media (min-width: 940px) {
+    .calcWrapper{
+        width: 100%;
+        padding: 10px;
+        margin:auto;
+    }
+    #results {
+        padding-left:50px;
+        padding-right:50px;
+        font-size: 14pt;
+    }
+    .calcForms{
+        text-align: center;
+    }
+    .calcSelBlock{
+        display:inline-block;
+        width: 32%;
+        text-align: left;
+        position: relative;
+    }
+    #weight{
+        padding:7px 0;
+    }
+    #mapa {
+        height: 700px;
+        width: 100%;
+        display:block;
+    }
+    
+    }
+@media (max-width: 939px) {
+    .calcWrapper{
+        width: 100%;
+        padding: 0 10px 10px 10px;
+        margin:auto;
+    }
+    .calcForms{
+        text-align: center;
+    }
+    #results {
+        padding-left:10px;
+        padding-right:10px;
+    }
+    #weight{
+        padding:7px 0;
+        width: 100%;
+    }
+    #mapa {
+        height: 450px;
+        width: 100%;
+        max-width: 800px;
+        display:block;
+    }
+}
+    
